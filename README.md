@@ -1,7 +1,7 @@
 # CSS Frameworks: Bootstrap Fundamentals
-CSS Frameworks, like other frameworks, help developers speed up their development time by helping them avoid re-inventing the wheel every time they need to add common features to their application. CSS frameworks have already decided what buttons should look like, how to implement a mobile first design, how to implement a Navigation bar, or even an slideshow. We still have the flexibility to override the styles the frameworks provide because of the nature of CSS. This allows developers to write much less CSS than if we were starting from scratch with a blank document.
+CSS Frameworks, like other frameworks, help developers speed up their development time by helping them avoid reinventing the wheel every time they need to add standard features to their application. CSS frameworks have already decided what buttons should look like, how to implement a mobile-first design, how to implement a Navigation bar, or even a slideshow. We still have the flexibility to override the styles the frameworks provide because of the nature of CSS. This allows developers to write much less CSS than if we were starting from scratch with a blank document.
 
-In this lesson, we will focus on the [Bootstrap](http://www.getbootstrap.com) framework which was originally created at Twitter in 2010, Bootstrap has become one of the most popular front-end frameworks and open source projects in the world. This lesson will focus on Bootstrap 4.6.X. Bootstrap 5 is in beta at the time of writing this lesson. The high-level concepts are the same as previous versions and this will be the last beta before the final release.
+In this lesson, we will focus on the [Bootstrap](http://www.getbootstrap.com) framework which was originally created at Twitter in 2010, Bootstrap has become one of the most popular front-end frameworks and open-source projects in the world. This lesson will focus on Bootstrap 4.6.X. Bootstrap 5 is in beta at the time of writing this lesson. The high-level concepts are the same as previous versions and this will be the last beta before the final release.
 
 
 > To read more about the history of Bootstrap, [click here](https://getbootstrap.com/docs/5.0/about/overview/).
@@ -10,13 +10,13 @@ In this lesson, we will focus on the [Bootstrap](http://www.getbootstrap.com) fr
 ## Including Bootstrap in your Project
 In order to use Bootstrap, we have to include it in our project. There are several ways to accomplish this depending on how your project is set up. **We will focus on the 2 easiest and most common ways to include Bootstrap into your project to help you get started.**
 
-> **Several components rely on JavaScript to function properly. jQuery and Popper are imported as well as the Bootsrap CSS to provide additional functionality for the following components:**
+> **Several components rely on JavaScript to function properly. jQuery and Popper are imported as well as the Bootstrap CSS to provide additional functionality for the following components:**
 >  - **Alerts** for dismissing
 >  - **Buttons** for toggling states and checkbox/radio functionality
 >  - **Carousel**or all slide behaviors, controls, and indicators
 >  - **Collapse** for toggling visibility of content
 >  - **Dropdowns** for displaying and positioning (requires Popper)
->  - **Modals** for displaying, positioning, and scroll behavior
+>  - **Modals** for displaying, positioning, and scrolling behavior
 >  - **Navbar** for extending our Collapse plugin to implement responsive behavior
 >  - **Tooltips** and popovers for displaying and positioning (requires Popper)
 >  - **Scrollspy** for scroll behavior and navigation updates
@@ -24,7 +24,7 @@ In order to use Bootstrap, we have to include it in our project. There are sever
 ----
 
 ### Using the jsDelivr CDN (Content Delivery Network)
-As a developer, the quickest way to start using Bootstrap is by including the `CSS` and `JS` files into your project using the jsDelivr CDN (content delivery network). Bootstrap provides detailed instructions on how to include Boostrap using the CDN in their [quick start instructions](https://getbootstrap.com/docs/5.0/getting-started/introduction/#quick-start)
+As a developer, the quickest way to start using Bootstrap is by including the `CSS` and `JS` files into your project using the jsDelivr CDN (content delivery network). Bootstrap provides detailed instructions on how to include Bootstrap using the CDN in their [quick start instructions](https://getbootstrap.com/docs/5.0/getting-started/introduction/#quick-start)
 
 **Your HTML file will look like the following example when including Bootstrap from the CDN**  
 
@@ -52,21 +52,23 @@ As a developer, the quickest way to start using Bootstrap is by including the `C
 </html>
 ```
 
+> In Bootstrap 5, jQuery is no longer a dependency and has been removed.
+
 ----
 
 
-### Downloading Bootstrap
-As a developer, you can download ready-to-use compiled code for Bootstrap and easily drop it into your project. This method will ensure that Bootstrap is always available to your project as we are not relying on jsDelivr, a free open source CDN Bootstrap uses, to be up and available to ensure we have access to the Bootstrap resources that our site relies on.
+### Downloading Bootstrap (NOT RECOMMENDED FOR THIS LESSON)
+As a developer, you can download ready-to-use compiled code for Bootstrap and easily drop it into your project. This method will ensure that Bootstrap is always available to your project as we are not relying on jsDelivr, a free open-source CDN Bootstrap uses, to be up and available to ensure we have access to the Bootstrap resources that our site relies on.
 
-**To download bootstrap for your project follow these steps:**  
+**To download Bootstrap for your project follow these steps:**  
 
-1. Visit https://getbootstrap.com/docs/4.6/getting-started/download/#compiled-css-and-js and click `Download` to start downloading the Boostrap Zip File that contains the `JS` and `CSS` folders/files that you would include in your site.
+1. Visit https://getbootstrap.com/docs/4.6/getting-started/download/#compiled-css-and-js and click `Download` to start downloading the Bootstrap Zip File that contains the `JS` and `CSS` folders/files that you would include in your site.
 
-    > The Zip file downloaded will contain several versions of the CSS and JavaScript files. To better understand the differences of the files included, visit [this page](https://getbootstrap.com/docs/4.6/getting-started/contents/#css-files).
+    > The Zip file downloaded will contain several versions of the CSS and JavaScript files. To better understand the differences between the files included, visit [this page](https://getbootstrap.com/docs/4.6/getting-started/contents/#css-files).
 
 2. Unzip the downloaded file and move the `JS` and `CSS` files/folders to your projects directory where you are storing files of a similar type. The idea is to keep your JavaScript files together and Your CSS files together.
 
-3. Link the Boostrap CSS and JS files to my HTML files. 
+3. Link the Bootstrap CSS and JS files to my HTML files. 
 
 4. For now, we will continue to use the CDN for jQuery but you could visit https://jquery.com/download/ to download a local copy of the slim build to include locally.
 
@@ -88,13 +90,15 @@ As a developer, you can download ready-to-use compiled code for Bootstrap and ea
     <body>
         <h1>Hello, world!</h1>
 
-        <!-- inlcude jQuery slim (excludes the ajax and effects) -->
+        <!-- include jQuery slim (excludes the ajax and effects) -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <!-- Include the Bootstrap JavaScript Bundle File here -->
         <script src="./JS/bootstrap.bundle.min.js"></script>
     </body>
     </html>
 ```
+
+> In Bootstrap 5, jQuery is no longer a dependency and has been removed.
 
 ## Mobile First Design
 Bootstrap focuses on mobile-first responsive design. Most components are completely responsive with very little effort and bootstrap provides several classes that align with breakpoints to help us control how our layouts respond to changes in the viewport size.
@@ -108,12 +112,12 @@ Bootstrap uses media queries intended to create sensible breakpoints ranging fro
 - `lg` (Desktops) - **Active when the viewport width is >= 992px**
 - `xl` (Large Desktops) - **Active when the viewport width is >= 1200px**
 
-> You will rely on breakpoints to control the behavior of **Containers** and the **Grid System** to ensure that your content looks good no matter what screen size it is prensent on.
+> You will rely on breakpoints to control the behavior of **Containers** and the **Grid System** to ensure that your content looks good no matter what screen size it is present on.
 
 ## Bootstrap Containers
 Containers are layout elements in Bootstrap. Containers are used to group together elements as well as provide some default padding and margin. Containers are responsive to screen size as well
 
-**The two commonly used container classes provided by bootstrap are `.container` and `.container-fluid`**
+**The two commonly used container classes provided by Bootstrap are `.container` and `.container-fluid`**
 
 ```HTML
   <!-- The most common containers (.container and .container-fluid) -->
@@ -124,7 +128,7 @@ Containers are layout elements in Bootstrap. Containers are used to group togeth
   <div class="container-sm">100% wide until small breakpoint (<576)</div>
   <div class="container-md">100% wide until medium breakpoint (>= 768px)</div>
   <div class="container-lg">100% wide until large breakpoint (>= 992px)</div>
-  <div class="container-xl">100% wide until extra large breakpoint (>= 1200px)</div>
+  <div class="container-xl">100% wide until extra-large breakpoint (>= 1200px)</div>
 ```
 
 > **For a deeper dive into containers, check out [https://getbootstrap.com/docs/4.6/layout/overview/#containers](https://getbootstrap.com/docs/4.6/layout/overview/#containers)**
@@ -228,27 +232,27 @@ Column classes allow us to control how many columns out of the 12 allowed a part
 **This would produce a grid similar to the following**  
 ![rows_col_classes](row_col_classes.png)
 
-> **There are also repsonive row column classes like `.row-cols-md-4` that let you change the amount of columns that would appear in a row based on breakpoints. To learn more, visit [https://getbootstrap.com/docs/4.6/layout/grid/#row-columns](https://getbootstrap.com/docs/4.6/layout/grid/#row-columns)**
+> **There are also responsive row column classes like `.row-cols-md-4` that let you change the number of columns that would appear in a row based on breakpoints. To learn more, visit [https://getbootstrap.com/docs/4.6/layout/grid/#row-columns](https://getbootstrap.com/docs/4.6/layout/grid/#row-columns)**
 
 
 ## Bootstrap Utility Classes
-Bootstrap provides several categories of utiity classes that can help us format our content. **Utility clase can help us with adding adding borders to our elements, changing colors of elements on our pages, control spacing through margin and padding, and even things like postioning our elements where we want them without having to write our own custom CSS.** 
+Bootstrap provides several categories of utility classes that can help us format our content. **Utility class can help us with adding adding borders to our elements, changing the colors of elements on our pages, controlling spacing through margin and padding, and even things like positioning our elements where we want them without having to write our own custom CSS.** 
 
 > **In this section, we will cover some of the most common utility classes provided. For a complete list of Bootstrap utility classes, visit: [https://getbootstrap.com/docs/4.6/utilities](https://getbootstrap.com/docs/4.6/utilities)**
 
 ----
 
 ### Color Utility Classes
-We can use the color utility classes to change the color of various element's on our pages. The color utility classes give us control over things like border color, text color, background color, and even some built in Bootstrap Components leverage the color classes to change how they appear to our users.
+We can use the color utility classes to change the color of various elements on our pages. The color utility classes give us control over things like border color, text color, background color, and even some built-in Bootstrap Components leverage the color classes to change how they appear to our users.
 
 **Colors and the names of their classes available to us through bootstrap**
 ![colors](bootstrap_colors.png)
 
-**Exmaples of the color utilities being used for backgrounds and text**
+**Examples of the color utilities being used for backgrounds and text**
 
 ```HTML
 
-<!-- Examples of the text color utility clasess being used to change the color of the text in a paragraph element -->
+<!-- Examples of the text color utility classes being used to change the color of the text in a paragraph element -->
 <p class="text-primary">.text-primary</p>
 <p class="text-secondary">.text-secondary</p>
 <p class="text-success">.text-success</p>
@@ -256,7 +260,7 @@ We can use the color utility classes to change the color of various element's on
 <p class="text-warning">.text-warning</p>
 <p class="text-info">.text-info</p>
 
-<!-- Examples of the background color utility clasess being used to change the backgroud color of a div element -->
+<!-- Examples of the background color utility classes being used to change the background color of a div element -->
 <div class="bg-primary">.bg-primary</div>
 <div class="bg-secondary">.bg-secondary</div>
 <div class="bg-success">.bg-success</div>
@@ -276,7 +280,7 @@ We can use the color utility classes to change the color of various element's on
 ----
 
 ### Border Utility Classes
-We can use the border utility classes to add or remove an element’s borders. Below outlines the behavior of the base border utilites provided by bootstrap.
+We can use the border utility classes to add or remove an element’s borders. Below is the behavior of the base border utilities provided by Bootstrap.
 
 - `border` - Adds a 1px border to all sides of an element
 - `border-top` - Adds a 1px border to the top of an element
@@ -284,10 +288,10 @@ We can use the border utility classes to add or remove an element’s borders. B
 - `border-bottom` - Adds a 1px border to the bottom of an element
 - `border-left` - Adds a 1px border to left side of an element
 
-**Exmaples of the border utilities in action**  
+**Examples of the border utilities in action**  
 
 ```HTML
-<!-- defualt use of border utility classes -->
+<!-- default use of border utility classes -->
 <span class="border">Border on all sides</span>
 <span class="border-top">Top border only</span>
 <span class="border-right">Right border only</span>
@@ -322,9 +326,9 @@ The sizing utility classes control the width and height of elements on your page
 - `h-50` - 50% of the parent containers available vertical space
 - `h-75` - 75% of the parent containers available vertical space
 - `h-100` - 100% of the parent containers available vertical space (can be affected by additional margin and appear to extend past its container) 
-- `h-auto` - default behavior of a block level-element taking up all the available vertical space in its container but not affected by an additional margin
+- `h-auto` - default behavior of a block-level element taking up all the available vertical space in its container but not affected by an additional margin
 
-**A visual represetation of the `width` sizing classes highlightng `auto` vs `100`**
+**A visual representation of the `width` sizing classes highlighting `auto` vs `100`**
 
 ![sizing_classes](sizing_classes.png)
 
@@ -338,7 +342,7 @@ The spacing utility classes control the padding and margin for elements on your 
 
 **Base padding utility classes and sides**  
 
-> These must be combmined with a size
+> These must be combined with a size
 
 - `p`  - Padding for all 4 sides of an element
 - `pt` - Padding for the top of an element
@@ -348,9 +352,11 @@ The spacing utility classes control the padding and margin for elements on your 
 - `px` - Padding for the left and right sides of an element
 - `py` - Padding for the top and bottom of an element
 
+> In Bootstrap 5 `l` and `r` representing the **left** and **right** padding have been replaced to reflect the flexbox vocabulary of **start** and **end**. `pl` becomes `ps` and `pr` becomes `pe`
+
 **Base margin utility classes and sides**  
 
-> These must be combmined with a size
+> These must be combined with a size
 
 - `m ` - Margin for all 4 sides of an element
 - `mt` - Margin for the top of an element
@@ -359,6 +365,8 @@ The spacing utility classes control the padding and margin for elements on your 
 - `ml` - Margin for the left side of an element
 - `mx` - Margin for the left and right sides of an element
 - `my` - Margin for the top and bottom of an element
+
+> In Bootstrap 5  `l` and `r` representing the **left** and **right** margins have been replaced to reflect the flexbox vocabulary of **start** and **end**. `ml` becomes `ms` and `mr` becomes `me`
 
 **Sizing options for the above spacing utility classes** 
 
@@ -387,7 +395,7 @@ The spacing utility classes control the padding and margin for elements on your 
 <span class="mb-1 border">Set the margin to (1rem *.25) on the bottom of the element</span>
 
 <!-- combining padding and margin classes -->
-<span class="m-5 p-5 border">set the margin and pading to 5 (1rem * 3) on all sides of the element</span>
+<span class="m-5 p-5 border">set the margin and padding to 5 (1rem * 3) on all sides of the element</span>
 <span class="my-3 py-3 border">Set the margin and padding to 1rem on the top and bottom of the element</span>
 <span class="mb-1 pb-1 border">Set the margin and padding to (1rem *.25) on the bottom of the element</span>
 ```
@@ -395,7 +403,7 @@ The spacing utility classes control the padding and margin for elements on your 
 > **For more information on the Bootstrap spacing utility classes, visit: [https://getbootstrap.com/docs/4.6/utilities/spacing/](https://getbootstrap.com/docs/4.6/utilities/spacing/)**
 
 ## Working with Bootstrap Components
-Bootstrap comes bundled with a variety of components that can help speed up the development process. Components are ready to go design elements you can add to your webpage. Most components will look great no matter the screen size or device used to view them and come bundled a lot of ready-made functionality right at your fingertips. Some, but not all, components rely on JavaScript to provide functionality.
+Bootstrap comes bundled with a variety of components that can help speed up the development process. Components are ready-to-go design elements you can add to your webpage. Most components will look great no matter the screen size or device used to view them and come bundled with a lot of ready-made functionality right at your fingertips. Some, but not all, components rely on JavaScript to provide functionality.
 
 **Commonly Used Bootstrap Components**  
 - **Buttons**  - https://getbootstrap.com/docs/4.6/components/buttons/
@@ -439,28 +447,28 @@ Bootstrap’s custom button styles allow us to create buttons with support for m
 
 ```
 
-**This would produce a buttons that appear like the following** 
+**This would produce buttons that appear like the following** 
 
 ![bs_buttons](bs_buttons.png)
 
 ----
 
 ### The `Navbar` Component
-The Boostrap Navbar component is responsive header that includes support for branding, navigation, and more.
+The Bootstrap Navbar component is a responsive header that includes support for branding, navigation, and more.
 
 **The Basics of a Bootstrap Navbar**  
 
-- Navbars require a parent element, usually a `<nav>` element is used for accessiblilty purposes and the `navbar` class is applied.
+- Navbars require a parent element, usually a `<nav>` element is used for accessibility purposes and the `navbar` class is applied.
 - The `.navbar-expand{-sm|-md|-lg|-xl}` classes can applied to the `<nav>` element as well to help with responsive collapsing.
 - The [spacing](https://getbootstrap.com/docs/4.6/utilities/spacing/) and [flex](https://getbootstrap.com/docs/4.6/utilities/flex/) utility classes can be used for controlling spacing and alignment within navbars.
 
 **Content Supported Within a Navbar**
 
-- `navbar-brand` - can be applied to a element within the Navbar for your company name, product name, or even a logo.
+- `navbar-brand` - can be applied to an element within the Navbar for your company name, product name, or even a logo.
 - `navbar-nav`- can be applied to a list element within the Navbar to get navigation links inside your header (including support for dropdowns).
-- `navbar-toggler` -  can be applied to a element within the Navbar for use with Boostrap's collapse plugin and other navigation toggling behaviors.
-- `form-inline` -  can be applied to a `<form>` element within the Navbar for to include a properly formatted form within the Navbar.
-- `navbar-text` -  can be applied to a element within the Navbar for adding vertically centered text.
+- `navbar-toggler` -  can be applied to an element within the Navbar for use with Bootstrap's collapse plugin and other navigation toggling behaviors.
+- `form-inline` -  can be applied to a `<form>` element within the Navbar to include a properly formatted form within the Navbar.
+- `navbar-text` -  can be applied to an element within the Navbar for adding vertically centered text.
 - `collapse` and `navbar-collapse` - Can be wrapped around the `navbar-nav` element for grouping and hiding the navbar contents based on the breakpoint applied to the `<nav>` element with one of the `.navbar-expand{-sm|-md|-lg|-xl}` classes applied. 
 
 **A simple Navbar example**
@@ -502,5 +510,5 @@ The Boostrap Navbar component is responsive header that includes support for bra
 [Bootstrap Icons](https://icons.getbootstrap.com/#install)  
 
 ## Conclusion
-Bootstrap is a powerful framework that can speed our development efforts by provided a ton of boiler-plate styles and components that are ready to use and are responsive to different screen sizes from the start. There are many CSS frameworks out in the wild and Bootstrap is very popular and has been around since 2011. 
+Bootstrap is a powerful framework that can speed our development efforts by providing a ton of boiler-plate styles and components that are ready to use and are responsive to different screen sizes from the start. There are many CSS frameworks out in the wild and Bootstrap is very popular and has been around since 2011. 
 
